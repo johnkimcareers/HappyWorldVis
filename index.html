@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Who's Happy?</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>  
+    <!-- Add HTML content, SVG drawing area, ... -->
+    <h1>Who's Happy?</h1>
+    <div class="main-container">
+
+        <div id="ladder-score-explanation-container">
+            <p id="ladder-score-explanation-text">
+                We use the Cantril Ladder from the Gallup World Poll to measure happiness.
+                Respondents in the poll are asked to think of a ladder, 
+                where 0 is the worst life they could possibly have and 10 is the best. 
+                They are then asked to rate their own lives on this scale. The mean is then taken for each country.
+            </p>
+        </div>
+
+        <div class="geo-map">
+            <h2 style="text-align:center;">Happiness Mapped</h2>
+            <svg id="choropleth"></svg>
+        </div>
+        
+        <div id="tooltip"></div>
+        
+        <!-- D3 bundle -->
+        <script src="js/d3.v6.min.js"></script>
+
+        <!-- TopoJSON bundle -->
+        <script src="js/topojson.v3.js"></script>
+        
+        <div class="two-graphs">
+            <div class="scatter">
+                <h3>Happiness Correlation</h3>
+                <div>
+                    <svg id="scatter"></svg>
+                </div>
+                <div id="drop-down">
+                    Filter by:
+                    <select>
+                        <option value="freedom_life_choices">Freedom of life choices</option>
+                        <option value="GDP_per_capita">GDP per capita</option>
+                        <option value="female_gender">Gender of head of government</option>
+                        <option value="generosity">Generosity</option>
+                        <option value="life_expect" selected>Healthy Life Expectancy</option>
+                        <option value="perception_corruption">Perception of corruption</otpion>
+                        <option value="social_support">Social support</option>   
+                    </select>
+                </div>
+            </div>
+
+            <div class="barChart">
+                <h3>Happiest / Unhappiest Places</h3>
+                <div>
+                    <svg id="barChart"></svg>
+                </div>
+                <div >
+                    <span>Filter by:</span>
+                    <select id="drop-down-barChart" >
+                        <option value="countries">Countries</option>
+                        <option value="region">Region</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Our JS code -->
+
+    <script type="module" src="js/main.js"></script>
+    <script src="js/scatterplot.js"></script>
+    <script src="js/barchart.js"></script>
+    <script src="js/choroplethMap.js"></script>
+
+    <!-- lightstrip: from tutorial -->
+    <svg height="5" width="5" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="lightstripe" patternUnits="userSpaceOnUse" width="5" height="5"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzUnPgogIDxyZWN0IHdpZHRoPSc1JyBoZWlnaHQ9JzUnIGZpbGw9J3doaXRlJy8+CiAgPHBhdGggZD0nTTAgNUw1IDBaTTYgNEw0IDZaTS0xIDFMMSAtMVonIHN0cm9rZT0nIzg4OCcgc3Ryb2tlLXdpZHRoPScxJy8+Cjwvc3ZnPg==" x="0" y="0" width="5" height="5"> </image> </pattern> </defs></svg>
+
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* Reset all default styles */
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+/* Begin styling */
+h1 {
+    font-family: "Input Mono", "Input Mono Reg", "Courier", monospace;
+    background-color: #ffe054;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding:20px;
+}
+
+h2, h3 {
+    text-align:center;
+    font-family: "Input Mono", "Input Mono Reg", "Courier", monospace;
+}
+
+h3 {
+    font-size: larger;
+  }
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.two-graphs{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.choropleth-country:hover {
+    stroke: #333;
+}
+
+.choropleth-country-select {
+    stroke: #333;
+}
+
+#barChart {
+    margin-top: 50px;
+}
+
+.bar {
+    shape-rendering: crispEdges;
+}
+.bar:hover {
+    stroke: #777;
+}
+.bar.active {
+    stroke: #333;
+}
+
+.topHappyBar.bar-selected {
+    stroke: #333;
+    fill: #e3a024;
+}
+
+.topUnhappyBar.bar-selected {
+    stroke: #333;
+    fill: #CE6E20FF;
+}
+
+
+.barchart-axis line {
+    fill: none;
+    stroke: #ddd;
+    shape-rendering: crispEdges;
+}
+.barchart-axis text {
+    font-size: 13px;
+    fill: #6b6b6b;
+}
+
+.barchart-axis-title, .scatter-xTitle, .scatter-yTitle {
+    font-size: 16px;
+    fill: #888;
+}
+
+.barchart-y-axis .tick:first-child line {
+    stroke: #b1b1b1;
+}
+.barchart-y-axis .tick:first-child text {
+    display: none;
+}
+.barchart-x-axis .tick:first-child line {
+    display: none;
+}
+.barchart-axis path {
+    display: none;
+}
+
+#choropleth {
+  width: 1200px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+#ladder-score-explanation-container { 
+  padding: 20px 20px 0 20px;
+}
+
+#ladder-score-explanation-text {
+  text-align: justify;   
+  font-size: 18px;
+}
+
+#drop-down-scatter, #filter-barChart {
+    text-align: center;
+}
+
+.scatter path {
+    stroke: rgb(179, 178, 178);
+}
+
+.scatter .tick line {
+    stroke:rgb(179, 178, 178);
+}
+
+.point {
+    fill: #ffe054;
+    stroke: rgb(77, 77, 77);
+}
+
+.point:hover {
+    fill: #ff9501;
+    stroke: grey;
+    stroke-width: 2px;
+    opacity: 1;
+}
+
+.point.countrySelect {
+    fill: #ff9501;
+    stroke: black;
+    stroke-width: 2px;
+}
+
+#tooltip {
+    position: absolute;
+    display: none;
+    opacity: 1;
+    background: #fff;
+    box-shadow: 2px 2px 3px 0px rgb(92 92 92 / 0.5);
+    border: 1px solid #ddd;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+  }
+
+ .scatter {
+    padding-right: 80px;
+    padding-top: 25px;
+ }
+
+ .geo-map {
+    padding-top: 50px;
+ }
