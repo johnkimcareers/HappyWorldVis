@@ -1,4 +1,4 @@
-import geoData from '/data/countries-geo.json' assert { type: "json"};
+import geoData from '../data/countries-geo.json' assert { type: "json"};
 
 let scatterplot, barChart, choroplethMap;
 // global copy of all our data
